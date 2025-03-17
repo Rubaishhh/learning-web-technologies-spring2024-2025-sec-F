@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset style="display: flex; justify-content: center;">
+            <legend style="text-align: center;">Registration form</legend>
+        <table border="1">
+            <tr>
+                <th>First Name:</th>
+                <td><input type="text" value ="fname" name="fname" placeholder="Enter your first name" required></td>
+            </tr>
+            <tr>
+                <th>Last Name:</th>
+                <td><input type="text" value="lname" name="lname" placeholder="Enter your last name" required></td>
+            </tr>
+            <tr>
+                <th>ID:</th>
+                <td><input type="number" value="id" name="id" placeholder="Enter your ID" required></td>
+            </tr>
+            <tr>
+                <th>Address:</th>
+                <td><input type="text" value="ad" name="ad" placeholder="Enter your Address" required></td>
+            </tr>
+            <tr>
+                <th>Password:</th>
+                <td><input type="password" value="pass" name="pass" placeholder="Enter Password" required></td>
+            </tr>
+            <tr>
+                <th>Email:</th>
+                <td><input type="email" value="email" name="email" placeholder="Enter Email" required></td>
+            </tr>
+            <tr>
+                <th>Gender:</th>
+                <td>
+                    <input type="radio" name="gender" value="male"> Male
+                    <input type="radio" name="gender" value="female"> Female
+                    <input type="radio" name="gender" value="other"> Other
+                </td>
+            </tr>
+            <tr>
+                <th>Department:</th>
+                <td>
+                    <select id="dept" name="dept">
+                        <option value="CSE">CSE</option>
+                        <option value="EEE">EEE</option>
+                        <option value="IPE">IPE</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" >
+                    <input type="reset" value="Reset">
+                    <input type="submit" value="Submit">
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+    </form>
+</body>
+</html>
