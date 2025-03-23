@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <title>Js Example</title>
+</head>
+<body>
+    <h1 id="head">JS Example</h1>
+    <label for="username"> UserName :</label>
+    <input type="text" id="username" name="username" value="" onblur="test()" /> 
+    <br><br>
+    <label for="pass">Password :</label>
+    <input type="text" id="pass" name="pass" value="" onblur="test()" />
+
+    <input type="button" id="button" name="button" value="button" onclick="test()"/>
+
+    <!-- Error message -->
+    <p id="error"></p>
+
+    <script>
+    function test() {
+    let username = document.getElementById("username").value;
+    let pass = document.getElementById("pass").value;
+
+
+    let error = document.getElementById("error");
+    if (username === "" || pass === "") {
+        error.innerHTML = "Please enter both Username and Password.";
+        error.style.color = "red";
+    } else {
+        error.innerHTML = ""; // Clear the error message if input is valid
+        alert("Welcome "+ username);
+        console.log(username);
+    }
+}
+    </script>
+</body>
+</html>
