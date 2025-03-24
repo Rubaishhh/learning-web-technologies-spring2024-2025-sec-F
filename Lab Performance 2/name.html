@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form>
+    <label for="name">Name</label><br>
+    <input type="text" name="name" id="name" value="name">
+    <button type="button" id="button" name="button" value="button" onclick="check()">Submit</button>
+    <p id="error"></p>
+</form>
+
+<script>
+    function check() {
+        let name = document.getElementById("name").value;
+        let error = document.getElementById("error");
+        let valid = true;
+        if (name === "") {
+            error.innerHTML = "annot be empty";
+            return;
+        }
+
+      
+        if (name.length < 2) {
+            error.innerHTML = "Name must be at least 2 characters";
+            return;
+        }
+        for (let i = 0; i < name.length; i++) {
+            if (!((name[i] >= 'a' && name[i] <= 'z') || (name[i] >= 'A' && name[i] <= 'Z') || name[i] === '.' || name[i] === '-')) {
+                valid = false;
+                break;
+            }
+        }
+
+       
+        if (!valid) {
+            error.innerHTML = "invalid name";
+        } else {
+            alert("Name: " + name);
+            error.innerHTML = "";
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Gender</legend>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+        <p id="error"></p>
+
+        <br>
+        </fieldset><br>
+        <button id="button" name="button" onclick="selection()">Submit</button>
+        <script>
+            //gender er id different but name same
+            //so name dhore grouped
+            function selection(){
+                let error = document.getElementById("error");
+                let selected = false;
+                let rad = document.getElementsByName("gender");
+                for(let i=0; i<rad.length; i++){{
+                    if(rad[i].checked){
+                        selected = true;
+                        break;
+                        
+                    }
+                }
+                if(!selected){
+                    error.innerHTML = "select a gender";
+                }else{
+                    error.innerHTML = "";
+                    error.innerHTML = "You selected: " + rad[i].value;
+                }
+            }
+        }
+        </script>
+</body>
+</html>
