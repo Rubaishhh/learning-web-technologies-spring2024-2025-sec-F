@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Profile Picture</legend>
+        <label for="uid">User ID</label>
+        <input type="text" name = "uid" id = "uid" value = "" required><br><br>
+        <label for="pic">Picture</label>
+        <input type="file" id = "file">
+        <hr>
+        <button type="button" id="button" name="button" value="button" onclick="check()">Submit</button>
+
+        <script>
+            function check() {
+                let uid = document.getElementById('uid').value;
+                if(uid == ""){
+                    alert("User ID cannot be empty!");
+                }
+                else if(uid <= 0){
+                    alert("User ID must be a positive integer!");
+                }
+                else{
+                    alert("Valid");
+                }
+
+                let flinput = document.getElementById('file');
+                if(flinput.files.length == 0 ){
+                    alert("No file Selected!");
+                }else{
+                    alert("selected");
+                }
+            }
+
+        </script>
+    </fieldset>
+</body>
+</html>
