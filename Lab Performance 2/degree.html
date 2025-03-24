@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Degree</legend>
+        <input type="checkbox" id = "ssc "name="degree" value="SSC"> SSC
+        <input type="checkbox" id  = "hsc" name="degree" value="HSC"> HSC
+        <input type="checkbox" id = "bsc" name="degree" value="BSC"> BSc
+    </fieldset>
+    <p id = "error" style="color: brown;"></p>
+   <br> <button type="button" id="button" name="button" value="button" onclick="check()">Submit</button>   
+
+<script>
+    function check() {
+        let degree = document.getElementsByName('degree');
+        let checked = false;
+        let error = document.getElementById("error");
+
+        for(let i = 0; i < degree.length; i++) {
+            if(degree[i].checked) {
+                checked = true;
+                break;
+            }
+        }
+        if(!checked){
+            error.innerHTML = "Please check a degree";
+        }else{
+            error.innerHTML = "Selected";
+
+        }
+        }
+</script>
+</body>
+</html>
